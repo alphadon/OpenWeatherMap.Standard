@@ -6,8 +6,8 @@ namespace OpenWeatherMap.Standard
 {
     public enum WeatherUnits
     {
-        Standard,
-        imperial,
-        metric
+        Kelvin,
+        Imperial,
+        Metric
     }
 }

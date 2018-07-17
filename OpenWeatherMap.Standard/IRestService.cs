@@ -7,7 +7,7 @@ namespace OpenWeatherMap.Standard
 {
     public interface IRestService
     {
-        Task<WeatherData> GetAsync(string url);
+        Task<CurrentWeather> GetCurrentWeatherAsync(string url);
 
     }
 }

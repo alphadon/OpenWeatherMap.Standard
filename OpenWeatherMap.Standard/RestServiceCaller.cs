@@ -10,14 +10,14 @@ namespace OpenWeatherMap.Standard
     {
         HttpClient http = new HttpClient();
 
-        public async Task<WeatherData> GetAsync(string url)
+        public async Task<CurrentWeather> GetCurrentWeatherAsync(string url)
         {
-            WeatherData weather = null;
+            CurrentWeather weather = null;
 
             HttpClient http = new HttpClient();
             string json = "";
             json = await http.GetStringAsync(url);
-            weather = Newtonsoft.Json.JsonConvert.DeserializeObject<WeatherData>(json);
+            weather = Newtonsoft.Json.JsonConvert.DeserializeObject<CurrentWeather>(json);
 
             return weather;
         }
